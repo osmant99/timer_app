@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.container {
+  position: absolute;
+}
+.timer {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  position: fixed;
+  top: 25px;
+}
+
+.display {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.display .label {
+  font-size: 1rem;
+  margin: 0 5px;
+  color: #777;
+}
