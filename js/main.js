@@ -15,7 +15,11 @@ const start = () => {
       sec = 0;
     }
     sec = sec + 1;
-    seconds.innerHTML = sec;
+    if (sec <= 9) {
+      seconds.innerHTML = "0" + sec;
+    } else {
+      seconds.innerHTML = sec;
+    }
   }, 10 * 100);
 
   // minutes
@@ -25,15 +29,26 @@ const start = () => {
       min = 0;
     }
     min = min + 1;
-    minutes.innerHTML = min;
+    if (min <= 9) {
+      minutes.innerHTML = "0" + min;
+    } else {
+      minutes.innerHTML = min;
+    }
   }, 60 * 1000);
 
   // hours
 
   let hrsInterval = setInterval(() => {
     hr = hr + 1;
-    hours.innerHTML = hr;
+    if (hr <= 9) {
+      hours.innerHTML = "0" + hr;
+    } else {
+      hours.innerHTML = hr;
+    }
   }, 36 * 100 * 1000);
+
+  // reset
+
   const reset = () => {
     clearInterval(secInterval);
     clearInterval(minInterval);
